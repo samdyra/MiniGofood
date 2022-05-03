@@ -17,32 +17,29 @@ const SearchScreen = () => {
   return (
     <ScrollView>
       <>
-        <SearchBar
-          term={term}
-          onTermChange={setTerm}
-          onTermSubmit={() => searchApi(term)}
-        ></SearchBar>
+        <Text style={styles.title}>Kamerad-Food</Text>
+        <SearchBar term={term} onTermChange={setTerm} onTermSubmit={() => searchApi(term)}></SearchBar>
         {error ? <Text>{error}</Text> : null}
-        <ResultLists
-          results={filterResultByPrice("$")}
-          title="Cost Effective"
-        ></ResultLists>
-        <ResultLists
-          results={filterResultByPrice("$$")}
-          title="Pricey"
-        ></ResultLists>
-        <ResultLists
-          results={filterResultByPrice("$$$")}
-          title="Spender"
-        ></ResultLists>
-        <ResultLists
-          results={filterResultByPrice("$$$$")}
-          title="Big Spender"
-        ></ResultLists>
+        <ResultLists results={filterResultByPrice("$")} title="Cost Effective"></ResultLists>
+        <ResultLists results={filterResultByPrice("$$")} title="Pricey"></ResultLists>
+        <ResultLists results={filterResultByPrice("$$$")} title="Spender"></ResultLists>
+        <ResultLists results={filterResultByPrice("$$$$")} title="Big Spender"></ResultLists>
       </>
     </ScrollView>
   );
 };
-const styles = StyleSheet.create({});
+
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 22,
+    fontWeight: "700",
+    marginLeft: 20,
+    marginTop: 38,
+  },
+});
+
+SearchScreen.navigationOptions = {
+  headerShown: false,
+};
 
 export default SearchScreen;

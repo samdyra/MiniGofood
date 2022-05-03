@@ -31,11 +31,12 @@ const ResultLists = ({ title, results, navigation }) => {
 const styles = StyleSheet.create({
   title: {
     fontSize: 18,
-    fontWeight: "bold",
-    marginLeft: 15,
+    fontWeight: "700",
+    marginLeft: 18,
+    marginBottom: 5,
   },
   container: {
-    marginBottom: 10,
+    marginBottom: 20,
   },
 });
 export default withNavigation(ResultLists);

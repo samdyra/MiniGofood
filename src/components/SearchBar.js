@@ -6,22 +6,16 @@ const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
   return (
     <View style={styles.backgroundStyle}>
       <Feather name="search" style={styles.iconStyle}></Feather>
-      <TextInput
-        placeholder="Search"
-        style={styles.inputStyle}
-        value={term}
-        onChangeText={onTermChange}
-        onEndEditing={onTermSubmit}
-      ></TextInput>
+      <TextInput placeholder="Search" style={styles.inputStyle} value={term} onChangeText={onTermChange} onEndEditing={onTermSubmit}></TextInput>
     </View>
   );
 };
 const styles = StyleSheet.create({
   backgroundStyle: {
-    backgroundColor: "#F0EEEE",
+    backgroundColor: "rgb(219, 219, 219)",
     height: 50,
     borderRadius: 10,
-    marginHorizontal: 15,
+    marginHorizontal: 17,
     flexDirection: "row",
     marginTop: 15,
     marginBottom: 10,
@@ -31,7 +25,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   iconStyle: {
-    fontSize: 35,
+    fontSize: 28,
     alignSelf: "center",
     marginHorizontal: 15,
   },
